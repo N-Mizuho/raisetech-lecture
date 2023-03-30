@@ -2,18 +2,18 @@
 
 ### アプリの起動確認
 
-![アプリの起動確認](https://user-images.githubusercontent.com/101118195/227972378-249507c3-9b92-4c30-a31d-655171c6f86a.png)
+![アプリの起動確認](images/kidou.png)
 
 ### APサーバ停止後
 
-![APサーバ停止](https://user-images.githubusercontent.com/101118195/227972701-024e820f-b5ca-408d-ba96-e260bd0cc2c5.png)
+![APサーバ停止](images/error2.png)
 
 #### APサーバのバージョン
 puma version 5.5.2
 
 ### DBサーバ停止後
 
-![DBサーバ停止](https://user-images.githubusercontent.com/101118195/227973102-82224645-ff82-42ff-ac7c-287d3ef3188b.png)
+![DBサーバ停止](images/error.png)
 
 #### DBサーバのバージョン
 mysql  Ver 8.0.32 for Linux on x86_64
