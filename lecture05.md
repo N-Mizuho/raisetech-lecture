@@ -3,25 +3,35 @@
 ### 組み込みサーバでアプリを起動
 
 ## ターミナル
-![組み込みサーバ起動確認](images05/組み込みサーバ起動.png)
+![組み込みサーバ起動確認](images05/kumikomi_terminal.png)
 
 ## ブラウザ
-![組み込みサーバ起動確認](images/組み込みサーバ.png)
+![組み込みサーバ起動確認](images05/kumikomi.png)
 
 ### nginx,unicornでアプリを起動
 
 ## ターミナル
-![APサーバ停止](images/error2.png)
+![nginx,unicorn起動確認](images05/nginx,unicorn_terminal.png)
 
-#### APサーバのバージョン
-puma version 5.5.2
+## ブラウザ
+![nginx,unicorn起動確認](images05/nginx,unicorn.png)
 
-### DBサーバ停止後
+### ALB追加
 
-![DBサーバ停止](images/error.png)
+## ALB_healthyチェック後
+![ALB_healthy_check](images05/ALB_healthy.png)
 
-#### DBサーバのバージョン
-mysql  Ver 8.0.32 for Linux on x86_64
+## ブラウザ
+![ALB_healthy_check](images05/ALB.png)
+
+### S３追加
+
+## ec2とS3連携
+![S3追加](images05/ec2,S3_terminal.png)
+
+## コンソール画面
+![S3追加](images05/S3.png)
+
 
 ### Railsの構成管理ツール
 Bundler
