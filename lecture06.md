@@ -31,6 +31,9 @@ DescribeAlarms(アラームの説明)
 
 今月はまだ無料期間枠に収まっています。
 
+### 見積り書
+https://calculator.aws/#/estimate?id=01b796bfd3d6d603a424d1cf0ed3a242efe5a1b0
+
 
 ### 感想
 cloudtrail、cloudwatchについて実際にサービスを扱ってみたり、ログを確認したことで今まで資格勉強の為に文字で覚えたサービスの理解を深めることができました。
