@@ -18,7 +18,6 @@ DescribeAlarms(アラームの説明)
 
 
 ・アプリケーションの起動を停止した際のアラート
-
 ![ALBアラート確認](images06/ALB_unhealthy.png)
 
 紐づけたメールアドレスにunhealthyアラートが通知されました。
