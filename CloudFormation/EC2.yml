@@ -1,0 +1,29 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 
+  EC2 create
+    
+Resources:
+
+  myEC2ForCf:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: ami-07ef6bae15a8cad0d
+      InstanceType: t2.micro
+      KeyName: !ImportValue KeyForCf
+      NetworkInterfaces:
+        - AssociatePublicIpAddress : true #パブリック自動割り当て
+          DeviceIndex: 0 #自動割り当てするインデックスデバイスを指定
+          DeleteOnTermination: true #インスタンス削除時のアタッチされているEBSの削除コマンド
+          GroupSet: 
+            - !ImportValue myEC2SecurityGroup
+          SubnetId: !ImportValue PublicSubnet1c
+      Tags:
+        - Key: Name
+          Value: myEC2ForCf
+
+Outputs:
+  StackmyEC2:
+    Description: The ID of the EC2
+    Value: !Ref myEC2ForCf
+    Export:
+      Name: myEC2

@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 
+  rds & SubnetGroup create
+
+Resources: 
+  MyDBForCf:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      DBInstanceIdentifier: MyDB-forcf
+      AllocatedStorage: '20'
+      DBInstanceClass: db.t3.micro
+      Engine: MySQL
+      MasterUsername: root
+      MasterUserPassword: AgdhYfJu71F0
+      BackupRetentionPeriod: 0
+      PubliclyAccessible: false
+      StorageEncrypted: true
+      CopyTagsToSnapshot: false
+      DeleteAutomatedBackups: true
+      VPCSecurityGroups: 
+        - !ImportValue myDBSecurityGroup
+      DBSubnetGroupName: !Ref myDBSubnetGroup
+      Tags:
+        - Key: Name
+          Value: MyDBForCf
+    #DeletionPolicy: Snapshot
+
+  myDBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: SubnetGroup create
+      DBSubnetGroupName: myDBSubnetGroup
+      SubnetIds:
+        - !ImportValue PrivateSubnet1a
+        - !ImportValue PrivateSubnet1c
+      Tags:
+        - Key: Name
+          Value: myDBSubnetGroup
+
+#Outputs:
