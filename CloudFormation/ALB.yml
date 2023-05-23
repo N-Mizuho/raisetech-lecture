@@ -18,6 +18,7 @@ Resources:
       Tags:
         - Key: Name
           Value: myALBForCf
+
   myALBListenerHTTP:
     Type: AWS::ElasticLoadBalancingV2::Listener
     Properties:
@@ -27,6 +28,7 @@ Resources:
       DefaultActions:
       - TargetGroupArn: !Ref myALBTargetGroup
         Type: forward
+        
   myALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
