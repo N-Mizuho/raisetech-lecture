@@ -54,7 +54,7 @@ Resources:
         - Key: Name
           Value: myALBTargetGroup
 
-Outputs: >
+Outputs:
   ALBURL:
     Description: ALB endpoint URL
     Value: !Join
