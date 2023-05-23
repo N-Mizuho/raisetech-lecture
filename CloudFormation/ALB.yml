@@ -1,6 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description:
   ALB create
+  
 Resources: 
   myALBForCf:
     Type: AWS::ElasticLoadBalancingV2::LoadBalancer
@@ -51,11 +52,13 @@ Resources:
         HttpCode: 200
       Tags:
         - Key: Name
-          Value: myALBTargetGroup       
+          Value: myALBTargetGroup
+
 Outputs:
-  ALBURL:
+  ALBURL: |+
     Description: ALB endpoint URL
     Value: !Join
         - ""
         - - http://
-          - !GetAtt myALBForCf.DNSName         
+          - !GetAtt myALBForCf.DNSName  
+               
