@@ -27,3 +27,4 @@ Outputs:
     Value: !Ref myEC2ForCf
     Export:
       Name: myEC2
+      
