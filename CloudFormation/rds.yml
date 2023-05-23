@@ -11,7 +11,7 @@ Resources:
       DBInstanceClass: db.t3.micro
       Engine: MySQL
       MasterUsername: root
-      MasterUserPassword: AgdhYfJu71F0
+      MasterUserPassword: aaaaaaaaaa #rdsマスターパス
       BackupRetentionPeriod: 0
       PubliclyAccessible: false
       StorageEncrypted: true

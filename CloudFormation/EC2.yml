@@ -7,7 +7,7 @@ Resources:
   myEC2ForCf:
     Type: AWS::EC2::Instance
     Properties: 
-      ImageId: ami-07ef6bae15a8cad0d
+      ImageId: ami-aaaaaaaaaaaaaa #ImageIdを入力
       InstanceType: t2.micro
       KeyName: !ImportValue KeyForCf
       NetworkInterfaces:
