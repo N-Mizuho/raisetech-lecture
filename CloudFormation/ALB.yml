@@ -60,4 +60,4 @@ Outputs: >
     Value: !Join
         - ""
         - - http://
-          - !GetAtt myALBForCf.DNSName 
+          - !GetAtt myALBForCf.DNSName
