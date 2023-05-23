@@ -54,11 +54,10 @@ Resources:
         - Key: Name
           Value: myALBTargetGroup
 
-Outputs:
-  ALBURL: |+
+Outputs: >
+  ALBURL:
     Description: ALB endpoint URL
     Value: !Join
         - ""
         - - http://
-          - !GetAtt myALBForCf.DNSName  
-               
+          - !GetAtt myALBForCf.DNSName 
