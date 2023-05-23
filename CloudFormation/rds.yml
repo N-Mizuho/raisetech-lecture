@@ -23,7 +23,6 @@ Resources:
       Tags:
         - Key: Name
           Value: MyDBForCf
-    #DeletionPolicy: Snapshot
 
   myDBSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
@@ -36,5 +35,3 @@ Resources:
       Tags:
         - Key: Name
           Value: myDBSubnetGroup
-
-#Outputs:

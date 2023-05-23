@@ -14,8 +14,6 @@ Resources:
       Subnets:
         - !ImportValue PublicSubnet1a
         - !ImportValue PublicSubnet1c
-      #Instance:
-       # - !ImportValue myEC2
       IpAddressType: ipv4
       Tags:
         - Key: Name
