@@ -24,7 +24,7 @@ Resources:
         - Key: Name
           Value: MyDBForCf
 
-  myDBSubnetGroup: >
+  myDBSubnetGroup:
     Type: AWS::RDS::DBSubnetGroup
     Properties:
       DBSubnetGroupDescription: SubnetGroup create

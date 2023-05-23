@@ -140,7 +140,7 @@ Outputs:
     Export:
       Name: PrivateSubnet1a
 
-  StackPrivateSubnet1c: >
+  StackPrivateSubnet1c:
     Description: The ID of the VPC Subnet
     Value: !Ref PrivateSubnetForCf1c
     Export:

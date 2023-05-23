@@ -10,7 +10,7 @@ Resources:
       KeyName: KeyForCf
       KeyType: rsa
       
-Outputs: >
+Outputs:
   StackKeyForCf:
       Description: EC2 KeyPair
       Value: !Ref KeyForCf

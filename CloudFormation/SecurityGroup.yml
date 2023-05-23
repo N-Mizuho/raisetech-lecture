@@ -85,7 +85,7 @@ Outputs:
     Export:
       Name: myEC2SecurityGroup
 
-  StackmyALBSecurityGroup: >
+  StackmyALBSecurityGroup:
     Description: The ID of the ALBSecurityGroup
     Value: !Ref myALBSecurityGroup
     Export:
