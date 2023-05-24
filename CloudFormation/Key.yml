@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: 
+  KeyPair create
+
+Resources: 
+  KeyForCf:
+    Description: Name of an existing EC2 KeyPair.
+    Type: AWS::EC2::KeyPair
+    Properties:
+      KeyName: KeyForCf
+      KeyType: rsa
+      
+Outputs:
+  StackKeyForCf:
+      Description: EC2 KeyPair
+      Value: !Ref KeyForCf
+      Export:
+        Name: KeyForCf

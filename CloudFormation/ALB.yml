@@ -1,0 +1,65 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description:
+  ALB create
+  
+Resources: 
+  myALBForCf:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: myALBForCf
+      Type: application
+      Scheme: internet-facing
+      SecurityGroups:
+        - !ImportValue myALBSecurityGroup
+      Subnets:
+        - !ImportValue PublicSubnet1a
+        - !ImportValue PublicSubnet1c
+      IpAddressType: ipv4
+      Tags:
+        - Key: Name
+          Value: myALBForCf
+
+  myALBListenerHTTP:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref myALBForCf
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+      - TargetGroupArn: !Ref myALBTargetGroup
+        Type: forward
+        
+  myALBTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: myALBTargetGroup
+      VpcId: !ImportValue VPCID
+      IpAddressType: ipv4
+      Port: 80
+      Protocol: HTTP
+      ProtocolVersion: HTTP1
+      TargetType: instance
+      Targets:
+        - Id: !ImportValue myEC2
+          Port: 80
+      HealthCheckEnabled: true
+      HealthCheckIntervalSeconds: 30
+      HealthCheckPath: /
+      HealthCheckPort: traffic-port
+      HealthCheckProtocol: HTTP
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 5
+      UnhealthyThresholdCount: 2
+      Matcher:
+        HttpCode: 200
+      Tags:
+        - Key: Name
+          Value: myALBTargetGroup
+
+Outputs:
+  ALBURL:
+    Description: ALB endpoint URL
+    Value: !Join
+        - ""
+        - - http://
+          - !GetAtt myALBForCf.DNSName
