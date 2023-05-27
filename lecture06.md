@@ -12,13 +12,13 @@ DescribeAlarms(アラームの説明)
 ### cloudwatchアラーム設定について
 
 ・アプリケーションを起動した際のOKアクション
-![ALBアクション確認](images06/ALB_OK.png)
+![ALBアクション確認](images/ALB_OK.png)
 
 紐づけたメールアドレスにOKアラートが通知されました。
 
 
 ・アプリケーションの起動を停止した際のアラート
-![ALBアラート確認](images06/ALB_unhealthy.png)
+![ALBアラート確認](images/ALB_unhealthy.png)
 
 紐づけたメールアドレスにunhealthyアラートが通知されました。
 

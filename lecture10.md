@@ -5,7 +5,7 @@
 
 ### 作成したリソース
 ALB,EC2,RDS,VPC(subnet含め),キーペア,セキュリティグループ
-![スタック作成確認](images10/Cloudformation_stack.png)
+![スタック作成確認](images/Cloudformation_stack.png)
 
 ### 感想
 エラーがフワッとしていてとても分かりにくかったのでエラー対処が大変だと感じました。

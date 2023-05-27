@@ -2,18 +2,18 @@
 
 ### アプリの起動確認
 
-![アプリの起動確認](images03/kidou.png)
+![アプリの起動確認](images/kidou.png)
 
 ### APサーバ停止後
 
-![APサーバ停止](images03/error2.png)
+![APサーバ停止](images/error2.png)
 
 #### APサーバのバージョン
 puma version 5.5.2
 
 ### DBサーバ停止後
 
-![DBサーバ停止](images03/error.png)
+![DBサーバ停止](images/error.png)
 
 #### DBサーバのバージョン
 mysql  Ver 8.0.32 for Linux on x86_64
