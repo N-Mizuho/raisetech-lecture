@@ -36,7 +36,7 @@ Resources:
 
   RoutePublic:
     Type: AWS::EC2::Route
-    DependsOn: IgwForCf
+    #DependsOn: IgwForCf
     Properties:
       RouteTableId: !Ref RoutePublicsubnet
       DestinationCidrBlock: 0.0.0.0/0
@@ -45,7 +45,7 @@ Resources:
   PublicSubnetForCf1a:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1a"
+        AvailabilityZone: ap-northeast-1a
         VpcId: !Ref VpcForCf
         CidrBlock: 10.0.0.0/20
         Tags:
@@ -61,7 +61,7 @@ Resources:
   PublicSubnetForCf1c:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1c"
+        AvailabilityZone: ap-northeast-1c
         VpcId: !Ref VpcForCf 
         CidrBlock: 10.0.16.0/20
         Tags:
@@ -85,7 +85,7 @@ Resources:
   PrivateSubnetForCf1a:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1a"
+      AvailabilityZone: ap-northeast-1a
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.128.0/20
       Tags:
@@ -101,7 +101,7 @@ Resources:
   PrivateSubnetForCf1c:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1c"
+      AvailabilityZone: ap-northeast-1c
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.144.0/20
       Tags:
@@ -144,4 +144,4 @@ Outputs:
     Description: The ID of the VPC Subnet
     Value: !Ref PrivateSubnetForCf1c
     Export:
-      Name: !Sub PrivateSubnet1c
+      Name: PrivateSubnet1c
