@@ -45,14 +45,17 @@ Resources:
   PublicSubnetForCf1a:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1a"
+        AvailabilityZone:
+          Fn::Select: 
+            - 0
+            - Fn::GetAZs: ""
         VpcId: !Ref VpcForCf
         CidrBlock: 10.0.0.0/20
         Tags:
         - Key: Name
           Value: PublicSubnetForCf1a
         
-  RouteTableAssocPublic01:
+  RouteTableAssocPublic1a:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       SubnetId: !Ref PublicSubnetForCf1a
@@ -61,14 +64,17 @@ Resources:
   PublicSubnetForCf1c:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1c"
+        AvailabilityZone:
+          Fn::Select: 
+            - 2
+            - Fn::GetAZs: ""
         VpcId: !Ref VpcForCf 
         CidrBlock: 10.0.16.0/20
         Tags:
         - Key: Name
           Value: PublicSubnetForCf1c
           
-  RouteTableAssocPublic02:
+  RouteTableAssocPublic1c:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       SubnetId: !Ref PublicSubnetForCf1c
@@ -85,14 +91,17 @@ Resources:
   PrivateSubnetForCf1a:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1a"
+      AvailabilityZone:
+        Fn::Select: 
+          - 0
+          - Fn::GetAZs: ""
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.128.0/20
       Tags:
         - Key: Name
           Value: PrivateSubnetForCf1a
   
-  RouteTableAssocPrivate01:
+  RouteTableAssocPrivate1a:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       SubnetId: !Ref PrivateSubnetForCf1a
@@ -101,14 +110,17 @@ Resources:
   PrivateSubnetForCf1c:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1c"
+      AvailabilityZone:
+        Fn::Select: 
+          - 2
+          - Fn::GetAZs: ""
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.144.0/20
       Tags:
         - Key: Name
           Value: PrivateSubnetForCf1c
 
-  RouteTableAssocPrivate02:
+  RouteTableAssocPrivate01c:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       SubnetId: !Ref PrivateSubnetForCf1c
