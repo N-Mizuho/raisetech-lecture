@@ -11,7 +11,7 @@ Resources:
       DBInstanceClass: db.t3.micro
       Engine: MySQL
       MasterUsername: root
-      MasterUserPassword: aaaaaaaaaa #rdsマスターパス
+      MasterUserPassword: '{{resolve:ssm-secure:MasterUserPassword}}'
       BackupRetentionPeriod: 0
       PubliclyAccessible: false
       StorageEncrypted: true
@@ -30,8 +30,8 @@ Resources:
       DBSubnetGroupDescription: SubnetGroup create
       DBSubnetGroupName: myDBSubnetGroup
       SubnetIds:
-        - !ImportValue PrivateSubnet1a
-        - !ImportValue PrivateSubnet1c
+        - !ImportValue PrivateSubnet01
+        - !ImportValue PrivateSubnet02
       Tags:
         - Key: Name
           Value: myDBSubnetGroup

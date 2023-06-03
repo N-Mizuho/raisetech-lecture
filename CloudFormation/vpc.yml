@@ -36,42 +36,47 @@ Resources:
 
   RoutePublic:
     Type: AWS::EC2::Route
-    DependsOn: IgwForCf
     Properties:
       RouteTableId: !Ref RoutePublicsubnet
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref IgwForCf
       
-  PublicSubnetForCf1a:
+  PublicSubnetForCf01:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1a"
+        AvailabilityZone:
+          Fn::Select: 
+            - 0
+            - Fn::GetAZs: ""
         VpcId: !Ref VpcForCf
         CidrBlock: 10.0.0.0/20
         Tags:
         - Key: Name
-          Value: PublicSubnetForCf1a
+          Value: PublicSubnetForCf01
         
   RouteTableAssocPublic01:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PublicSubnetForCf1a
+      SubnetId: !Ref PublicSubnetForCf01
       RouteTableId: !Ref RoutePublicsubnet
 
-  PublicSubnetForCf1c:
+  PublicSubnetForCf02:
     Type: AWS::EC2::Subnet
     Properties:
-        AvailabilityZone: "ap-northeast-1c"
+        AvailabilityZone:
+          Fn::Select: 
+            - 1
+            - Fn::GetAZs: ""
         VpcId: !Ref VpcForCf 
         CidrBlock: 10.0.16.0/20
         Tags:
         - Key: Name
-          Value: PublicSubnetForCf1c
+          Value: PublicSubnetForCf02
           
   RouteTableAssocPublic02:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PublicSubnetForCf1c
+      SubnetId: !Ref PublicSubnetForCf02
       RouteTableId: !Ref RoutePublicsubnet
 
   RoutePrivatesubnet:
@@ -82,36 +87,42 @@ Resources:
         - Key: Name
           Value: Rt-privatesubnet
 
-  PrivateSubnetForCf1a:
+  PrivateSubnetForCf01:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1a"
+      AvailabilityZone:
+        Fn::Select: 
+          - 0
+          - Fn::GetAZs: ""
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.128.0/20
       Tags:
         - Key: Name
-          Value: PrivateSubnetForCf1a
+          Value: PrivateSubnetForCf01
   
   RouteTableAssocPrivate01:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PrivateSubnetForCf1a
+      SubnetId: !Ref PrivateSubnetForCf01
       RouteTableId: !Ref RoutePrivatesubnet
 
-  PrivateSubnetForCf1c:
+  PrivateSubnetForCf02:
     Type: AWS::EC2::Subnet
     Properties:
-      AvailabilityZone: "ap-northeast-1c"
+      AvailabilityZone:
+        Fn::Select: 
+          - 1
+          - Fn::GetAZs: ""
       VpcId: !Ref VpcForCf
       CidrBlock: 10.0.144.0/20
       Tags:
         - Key: Name
-          Value: PrivateSubnetForCf1c
+          Value: PrivateSubnetForCf02
 
   RouteTableAssocPrivate02:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      SubnetId: !Ref PrivateSubnetForCf1c
+      SubnetId: !Ref PrivateSubnetForCf02
       RouteTableId: !Ref RoutePrivatesubnet
   
 
@@ -122,26 +133,26 @@ Outputs:
     Export:
       Name: VPCID
 
-  StackPublicSubnet1a:
+  StackPublicSubnet01:
     Description: The ID of the VPC Subnet
-    Value: !Ref PublicSubnetForCf1a
+    Value: !Ref PublicSubnetForCf01
     Export:
-      Name: PublicSubnet1a
+      Name: PublicSubnet01
 
-  StackPublicSubnet1c:
+  StackPublicSubnet02:
     Description: The ID of the VPC Subnet
-    Value: !Ref PublicSubnetForCf1c
+    Value: !Ref PublicSubnetForCf02
     Export:
-      Name: PublicSubnet1c
+      Name: PublicSubnet02
 
-  StackPrivateSubnet1a:
+  StackPrivateSubnet01:
     Description: The ID of the VPC Subnet
-    Value: !Ref PrivateSubnetForCf1a
+    Value: !Ref PrivateSubnetForCf01
     Export:
-      Name: PrivateSubnet1a
+      Name: PrivateSubnet01
 
-  StackPrivateSubnet1c:
+  StackPrivateSubnet02:
     Description: The ID of the VPC Subnet
-    Value: !Ref PrivateSubnetForCf1c
+    Value: !Ref PrivateSubnetForCf02
     Export:
-      Name: !Sub PrivateSubnet1c
+      Name: PrivateSubnet02
