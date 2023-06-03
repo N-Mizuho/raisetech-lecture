@@ -30,8 +30,8 @@ Resources:
       DBSubnetGroupDescription: SubnetGroup create
       DBSubnetGroupName: myDBSubnetGroup
       SubnetIds:
-        - !ImportValue PrivateSubnet1a
-        - !ImportValue PrivateSubnet1c
+        - !ImportValue PrivateSubnet01
+        - !ImportValue PrivateSubnet02
       Tags:
         - Key: Name
           Value: myDBSubnetGroup

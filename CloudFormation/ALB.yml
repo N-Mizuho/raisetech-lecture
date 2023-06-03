@@ -12,8 +12,8 @@ Resources:
       SecurityGroups:
         - !ImportValue myALBSecurityGroup
       Subnets:
-        - !ImportValue PublicSubnet1a
-        - !ImportValue PublicSubnet1c
+        - !ImportValue PublicSubnet01
+        - !ImportValue PublicSubnet02
       IpAddressType: ipv4
       Tags:
         - Key: Name

@@ -16,7 +16,7 @@ Resources:
           DeleteOnTermination: true #インスタンス削除時のアタッチされているEBSの削除コマンド
           GroupSet: 
             - !ImportValue myEC2SecurityGroup
-          SubnetId: !ImportValue PublicSubnet1c
+          SubnetId: !ImportValue PublicSubnet01
       Tags:
         - Key: Name
           Value: myEC2ForCf
