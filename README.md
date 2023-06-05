@@ -11,6 +11,7 @@
 ## lecture.mdの概要
 #### lecture.mdファイルには下記内容の記録があります。
 
+
 lecture03.. Cloud9上でRailsの環境構築、アプリケーションのデプロイ確認
 
 lecture05.. ec2とRDS(MySQL)を使用したrails環境構築（使用したawsサービスは、EC2,RDS,ALB,S3）
@@ -25,6 +26,7 @@ lecture12.. CircleCIを使用したCloudformationのyml構文チェック
 
 ## 保有資格
 #### 取得するまでの勉強期間を含めて記載しています。
+
 
 CCNA（シスコシステムズ）.. 4ヶ月
 

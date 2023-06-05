@@ -34,7 +34,7 @@ AmazonSNSに紐づけたメールアドレスにOKアラートが通知されま
 今月はまだ無料期間枠に収まっています。
 
 ### 見積り書
-AWS Pricing Calculatorを使用して作成しました。使用してきたリソースの使用量を参考に作成しました。
+AWS Pricing Calculatorを使用して作成しました。今までに使用してきたリソースの使用量を参考に作成しました。
 
 https://calculator.aws/#/estimate?id=01b796bfd3d6d603a424d1cf0ed3a242efe5a1b0
 
