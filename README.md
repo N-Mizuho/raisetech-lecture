@@ -2,12 +2,14 @@
 
 簡単なCRUD処理のみを行うアプリケーションをCloud9上で作成し、デプロイするための環境構築、awsのサービスを使用したリソースのコード化、テストなどこれまでの勉強の記録をまとめています。
 
+
 作成したアプリケーションの使用言語..ruby
+
 環境構築したプラットフォーム..rails
 
 
 ## lecture.mdの概要
-lecture.mdファイルには下記内容の記録があります。
+#### lecture.mdファイルには下記内容の記録があります。
 
 lecture03.. Cloud9上でRailsの環境構築、アプリケーションのデプロイ確認
 
@@ -22,13 +24,14 @@ lecture11.. serverspecを使用したテストの実行
 lecture12.. CircleCIを使用したCloudformationのyml構文チェック
 
 
+
 ## 保有資格
-取得の勉強期間を含めて記載しています。
+#### 取得するまでの勉強期間を含めて記載しています。
 
-CCNA（CISCO社）.. 4ヶ月
+CCNA（シスコシステムズ）.. 4ヶ月
 
-AWS CLF（Amazon）.. 2ヶ月
+AWS CLF（Amazon Web Service）.. 2ヶ月
 
-AWS SAA（Amaozon）.. 3.5ヶ月
+AWS SAA（Amaozon Web Service）.. 3.5ヶ月
 
-基本情報技術者試験を取得するためにITパスポート取得に向けて勉強をしています。
+基本情報技術者試験に合格するためにITパスポート取得に向けて勉強をしています。
