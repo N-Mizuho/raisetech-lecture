@@ -15,15 +15,13 @@ lecture03.. Cloud9上でRailsの環境構築、アプリケーションのデプ
 
 lecture05.. ec2とRDS(MySQL)を使用したrails環境構築（使用したawsサービスは、EC2,RDS,ALB,S3）
 
-lecture06.. cloudtraiilを使用したログの確認、cloudwatchを使用したアラートの設定、見積書の作成
+lecture06.. cloudtrailを使用したログの確認、cloudwatchを使用したアラートの設定、見積書の作成
 
 lecture10.. Cloudformationを使用したリソースのコード化
 
 lecture11.. serverspecを使用したテストの実行
 
 lecture12.. CircleCIを使用したCloudformationのyml構文チェック
-
-
 
 ## 保有資格
 #### 取得するまでの勉強期間を含めて記載しています。
@@ -34,4 +32,4 @@ AWS CLF（Amazon Web Service）.. 2ヶ月
 
 AWS SAA（Amaozon Web Service）.. 3.5ヶ月
 
-基本情報技術者試験に合格するためにITパスポート取得に向けて勉強をしています。
+基本情報技術者試験に合格するために、まずはITパスポート取得に向けて勉強をしています。
