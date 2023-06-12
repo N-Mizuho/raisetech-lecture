@@ -4,9 +4,9 @@
 
 ---
 
-作成したアプリケーションの使用言語..ruby,html.css,JavaScript
+アプリケーションの使用言語.. ruby
 
-環境構築したプラットフォーム..rails
+環境構築.. Ruby on Rails
 
 ---
 
