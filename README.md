@@ -36,5 +36,5 @@
 
 - AWS CLF（Amazon Web Service）.. 2ヶ月
 
-- AWS SAA（Amaozon Web Service）.. 3.5ヶ月
+- AWS SAA（Amaozon Web Service）.. 3ヶ月
 
